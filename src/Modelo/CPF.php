@@ -13,6 +13,7 @@ class CPF
                 'regexp' => '/^[0-9]{3}\.[0-9]{3}\.[0-9]{3}\-[0-9]{2}$/'
             ]
         ]);
+
         if ($numero === false) {
             echo "Cpf inválido";
             exit();
@@ -20,7 +21,7 @@ class CPF
         $this->numero = $numero;
     }
 
-    public function recuperaNumero()
+    public function recuperaNumero(): string
     {
         return $this->numero;
     }

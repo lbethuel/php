@@ -6,19 +6,19 @@ use Alura\Banco\Modelo\Pessoa;
 use Alura\Banco\Modelo\CPF;
 use Alura\Banco\Modelo\Endereco;
 
-
 class Titular extends Pessoa
 {
+
     public function __construct(
-        public CPF $cpf,
-        public string $nome,
-        public Endereco $endereco,
-        // public Pessoa $validaNomeTitular
-    ) {
+        CPF $cpf, 
+        string $nome, 
+        Endereco $endereco)
+    {
         parent::__construct($nome, $cpf);
+        $this->endereco = $endereco;
     }
 
-    public function recuperaEndereco() 
+    public function recuperaEndereco(): Endereco
     {
         return $this->endereco;
     }
