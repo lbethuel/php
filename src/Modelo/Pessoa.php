@@ -2,12 +2,14 @@
 
 namespace Alura\Banco\Modelo;
 
+use Alura\Banco\Modelo\CPF;
+
 class Pessoa
 {
     
     public function __construct(
         protected string $nome, 
-        CPF $cpf)
+        public CPF $cpf)
     {
         $this->validaNomeTitular($nome);
       
