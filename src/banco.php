@@ -7,6 +7,7 @@ use Alura\Banco\Modelo\Endereco;
 use Alura\Banco\Modelo\CPF;
 use Alura\Banco\Modelo\Conta\Conta;
 use Alura\Banco\Modelo\Conta\ContaPoupanca;
+use Alura\Banco\Modelo\Conta\ContaCorrente;
 
 $endereco = new Endereco('SP', 'um bairro', 'minha rua', '10');
 
