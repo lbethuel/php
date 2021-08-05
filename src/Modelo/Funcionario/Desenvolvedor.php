@@ -2,6 +2,8 @@
 
 namespace Alura\Banco\Modelo\Funcionario;
 
+use Alura\Banco\Modelo\Autenticavel;
+
 class Desenvolvedor extends Funcionario
 {
     public function sobeDeNivel()
