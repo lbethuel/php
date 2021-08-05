@@ -14,3 +14,4 @@ class Desenvolvedor extends Funcionario
         return 500.0;
     }
 }
+
