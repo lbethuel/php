@@ -2,10 +2,11 @@
 
 namespace Alura\Banco\Modelo;
 
+require_once 'autoload.php';
+
 use Alura\Banco\Modelo\Funcionario\Diretor;
 use Alura\Banco\Service\Autenticador;
 
-require_once 'autoload.php';
 
 $autenticador = new Autenticador();
 
