@@ -16,8 +16,11 @@ $primeiraConta->saca(300);
 /* echo $primeiraConta->recuperaNomeTitular() . PHP_EOL;
 echo $primeiraConta->recuperaCpfTitular() . PHP_EOL;
 echo $primeiraConta->recuperaSaldo() . PHP_EOL;  */
-
 echo $primeiraConta->recuperaSaldo();
+
+echo "<pre>";
+var_dump($primeiraConta);
+echo "</pre>";
 
 /* $bia = new Titular(new CPF('698.549.548-10'), 'Biaaa', $endereco);
 $segundaConta = new Conta($bia);
