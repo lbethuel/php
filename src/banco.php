@@ -11,16 +11,16 @@ $endereco = new Endereco('SP', 'um bairro', 'minha rua', '10');
 $lucas = new Titular(new CPF('123.456.789-10'), 'Lucas', $endereco);
 $primeiraConta = new ContaPoupanca($lucas);
 $primeiraConta->deposita(500);
-$primeiraConta->saca(300); 
+$primeiraConta->saca(100); 
 
 /* echo $primeiraConta->recuperaNomeTitular() . PHP_EOL;
 echo $primeiraConta->recuperaCpfTitular() . PHP_EOL;
 echo $primeiraConta->recuperaSaldo() . PHP_EOL;  */
 echo $primeiraConta->recuperaSaldo();
 
-echo "<pre>";
-var_dump($primeiraConta);
-echo "</pre>";
+/* echo "<pre>";
+var_dump ($primeiraConta);
+echo "</pre>"; */
 
 /* $bia = new Titular(new CPF('698.549.548-10'), 'Biaaa', $endereco);
 $segundaConta = new Conta($bia);

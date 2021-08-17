@@ -4,8 +4,8 @@ function funcao1()
 {
     echo 'Entrei na função 1' . PHP_EOL;
     try {
-        funcao2(); 
-    } catch (DivisionByZeroError | RuntimeException $err) {
+        funcao2();
+    } catch (Throwable $err) {
         echo "<pre>";
         echo $err->getMessage();
         echo "</pre>";
@@ -15,7 +15,7 @@ function funcao1()
         echo "<pre>";
         echo $err->getTraceAsString();
         echo "</pre>";
-    } 
+    }
     echo 'Saindo da função 1' . PHP_EOL;
 }
 
@@ -23,7 +23,9 @@ function funcao2()
 {
     echo 'Entrei na função 2' . PHP_EOL;
 
-    $divisao = intdiv(5, 0);
+    throw new BadFunctionCallException('Mensagem da exceção');
+
+    /* $divisao = intdiv(5, 0);
     echo "<pre>";
     echo $divisao;
     echo "</pre>";
@@ -32,11 +34,11 @@ function funcao2()
     $arrayFixo[3] = 'Valor';
     echo "<pre>";
     echo $arrayFixo;
-    echo "</pre>";
+    echo "</pre>"; 
 
     for ($i = 1; $i <= 5; $i++) {
         echo $i . PHP_EOL;
-    }
+    }*/
     //var_dump(debug_backtrace());
     echo 'Saindo da função 2' . PHP_EOL;
 }

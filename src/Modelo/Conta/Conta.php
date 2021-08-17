@@ -2,9 +2,12 @@
 
 namespace Alura\Banco\Modelo\Conta;
 
+use DomainException;
+use Exception;
+
 abstract class Conta
 {
-    private $titular;
+    private Titular $titular;
     protected $saldo;
     private static $numeroDeContas = 0;
 
@@ -28,8 +31,7 @@ abstract class Conta
         $valorSaque = $valorASacar + $tarifaSaque;
 
         if ($valorSaque > $this->saldo) {
-            echo "Saldo indisponível";
-            return;
+            throw new SaldoInsuficienteException($valorSaque, $this->saldo);
         }
 
         $this->saldo -= $valorSaque;
